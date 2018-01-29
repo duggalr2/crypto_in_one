@@ -1,10 +1,9 @@
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse, get_object_or_404, redirect
-from .models import Feeds
-from .scripts.feed_handler import run_it
 from django.views.decorators.csrf import csrf_exempt
-from sklearn.feature_extraction.text import TfidfVectorizer
+from .models import FeedUrl, FeedDetail
+from .scripts import feed_handler
 
 
 def pag(a, request):
@@ -21,9 +20,8 @@ def pag(a, request):
 
 @csrf_exempt
 def home(request):
-    feed_list = Feeds.objects.all().order_by('-pk')
+    feed_list = FeedDetail.objects.all().order_by('-pk')
     if request.method == 'POST' and 'refresh' in request.POST:
-        run_it()
+        feed_handler.run_it()
         return render(request, 'home.html', {'object_list': feed_list})
     return render(request, 'home.html', {'object_list': feed_list})
-

@@ -11,8 +11,9 @@
 </form>
 
 {% for object in object_list %}
-    {{ object.id }} <b>{{ object.title }}</b> <br/>
-    {{ object.link }}<br/>
+{#    {{ object.title }} <br/>#}
+    {{ object.id }} <b>{{ object.title }}</b> <i>{{ object.timestamp }}</i><br/>
+    {{ object.story_url }}<br/>
 {% endfor %}
 
 

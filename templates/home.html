@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="POST">
+    <input name='refresh' type="submit" value="Refresh Feed" />
+</form>
+
+{% for object in object_list %}
+    {{ object.id }} <b>{{ object.title }}</b> <br/>
+    {{ object.link }}<br/>
+{% endfor %}
+
+
+</body>
+</html>

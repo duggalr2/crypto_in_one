@@ -1,6 +1,8 @@
 from multiprocessing.pool import ThreadPool
 import feedparser
 import sqlite3
+from time import mktime
+from datetime import datetime
 
 
 def parse_feed(feed_url):
@@ -19,17 +21,6 @@ c = conn.cursor()
 c.execute('SELECT url FROM crypto_feedurl')
 url_list = c.fetchall()
 hit_list = [url[0] for url in url_list]
-
-
-from time import mktime
-from datetime import datetime
-
-
-# l = parse_feed(hit_list[0])
-# for i in l:
-#     struct = i[-1]
-#     dt = datetime.fromtimestamp(mktime(struct))
-#     time = dt.strftime('%H:%M:%S')
 
 
 def feed_execute(parsed_feed):
@@ -62,10 +53,3 @@ def run_it():
     results = pool.map(parse_feed, hit_list)
     for result in results:
         feed_execute(result)
-# run_it()
-# feed_url = models.ForeignKey(FeedUrl, on_delete=models.CASCADE)
-#     title = models.CharField(max_length=1000)
-#     story_url = models.URLField()
-#     timestamp = models.TimeField()
-
-

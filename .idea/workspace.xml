@@ -4,9 +4,9 @@
     <list default="true" id="9bd68def-a728-44f5-950a-ece47444cf86" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crypto/models.py" afterPath="$PROJECT_DIR$/crypto/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crypto/scripts/feed_handler.py" afterPath="$PROJECT_DIR$/crypto/scripts/feed_handler.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crypto/views.py" afterPath="$PROJECT_DIR$/crypto/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crypto_in_one/settings.py" afterPath="$PROJECT_DIR$/crypto_in_one/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
     </list>
     <ignored path="crypto_in_one.iws" />
@@ -34,24 +34,24 @@
       <file leaf-file-name="feed_handler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crypto/scripts/feed_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+            <state relative-caret-position="285">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-                <marker date="1517262647892" expanded="true" signature="614:644" ph="SELECT url F... crypto_feedurl" />
-                <marker date="1517262647892" expanded="true" signature="969:1006" ph="SELECT MAX(i... crypto_feeddetail" />
-                <marker date="1517262647892" expanded="true" signature="1523:1622" ph="INSERT INTO crypto_feeds... " />
-                <marker date="1517262647892" expanded="true" signature="1837:1866" ph="DELETE FROM " />
+                <marker date="1517340902278" expanded="true" signature="668:698" ph="SELECT url F... crypto_feedurl" />
+                <marker date="1517340902278" expanded="true" signature="813:850" ph="SELECT MAX(i... crypto_feeddetail" />
+                <marker date="1517340902278" expanded="true" signature="1367:1466" ph="INSERT INTO crypto_feeds... " />
+                <marker date="1517340902278" expanded="true" signature="1681:1710" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crypto/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            <state relative-caret-position="255">
+              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+            <state relative-caret-position="180">
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -84,8 +84,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crypto_in_one/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+            <state relative-caret-position="327">
+              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,11 +111,11 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/crypto_in_one/urls.py" />
         <option value="$PROJECT_DIR$/crypto/files/urls" />
-        <option value="$PROJECT_DIR$/crypto_in_one/settings.py" />
         <option value="$PROJECT_DIR$/crypto/models.py" />
-        <option value="$PROJECT_DIR$/crypto/views.py" />
         <option value="$PROJECT_DIR$/crypto/scripts/feed_handler.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/crypto_in_one/settings.py" />
+        <option value="$PROJECT_DIR$/crypto/views.py" />
       </list>
     </option>
   </component>
@@ -154,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,7 +254,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,7 +262,7 @@
     <property name="FullScreen" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="home&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/templates/home.html&#10;fee&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/scripts/feed_handler.py&#10;mod&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/models.py&#10;vie&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/views.py&#10;hom&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/templates/home.html&#10;m&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/models.py&#10;ho&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/templates/home.html&#10;vi&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/views.py&#10;fe&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/scripts/feed_handler.py&#10;fed&#9;null&#9;null&#10;o&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/models.py&#10;feed&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/scripts/feed_handler.py&#10;view&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/views.py" />
+    <property name="SearchEverywhereHistoryKey" value="view&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/views.py&#10;set&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto_in_one/settings.py&#10;home&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/templates/home.html&#10;fee&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/scripts/feed_handler.py&#10;mod&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/models.py&#10;vie&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/views.py&#10;hom&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/templates/home.html&#10;m&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/models.py&#10;ho&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/templates/home.html&#10;vi&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/views.py&#10;fe&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/scripts/feed_handler.py&#10;fed&#9;null&#9;null&#10;o&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/models.py&#10;feed&#9;FILE&#9;file:///Users/Rahul/Desktop/Side_projects/crypto_in_one/crypto/scripts/feed_handler.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -572,14 +572,14 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24313408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24232633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -610,14 +610,64 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/crypto/scripts/feed_handler.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1517340902278" expanded="true" signature="668:698" ph="SELECT url F... crypto_feedurl" />
+            <marker date="1517340902278" expanded="true" signature="813:850" ph="SELECT MAX(i... crypto_feeddetail" />
+            <marker date="1517340902278" expanded="true" signature="1367:1466" ph="INSERT INTO crypto_feeds... " />
+            <marker date="1517340902278" expanded="true" signature="1681:1710" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto_in_one/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/scripts/feed_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <marker date="1517262647892" expanded="true" signature="614:644" ph="SELECT url F... crypto_feedurl" />
-            <marker date="1517262647892" expanded="true" signature="969:1006" ph="SELECT MAX(i... crypto_feeddetail" />
-            <marker date="1517262647892" expanded="true" signature="1523:1622" ph="INSERT INTO crypto_feeds... " />
-            <marker date="1517262647892" expanded="true" signature="1837:1866" ph="DELETE FROM " />
+            <marker date="1517340902278" expanded="true" signature="668:698" ph="SELECT url F... crypto_feedurl" />
+            <marker date="1517340902278" expanded="true" signature="813:850" ph="SELECT MAX(i... crypto_feeddetail" />
+            <marker date="1517340902278" expanded="true" signature="1367:1466" ph="INSERT INTO crypto_feeds... " />
+            <marker date="1517340902278" expanded="true" signature="1681:1710" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -654,10 +704,10 @@
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <marker date="1517262647892" expanded="true" signature="614:644" ph="SELECT url F... crypto_feedurl" />
-            <marker date="1517262647892" expanded="true" signature="969:1006" ph="SELECT MAX(i... crypto_feeddetail" />
-            <marker date="1517262647892" expanded="true" signature="1523:1622" ph="INSERT INTO crypto_feeds... " />
-            <marker date="1517262647892" expanded="true" signature="1837:1866" ph="DELETE FROM " />
+            <marker date="1517340902278" expanded="true" signature="668:698" ph="SELECT url F... crypto_feedurl" />
+            <marker date="1517340902278" expanded="true" signature="813:850" ph="SELECT MAX(i... crypto_feeddetail" />
+            <marker date="1517340902278" expanded="true" signature="1367:1466" ph="INSERT INTO crypto_feeds... " />
+            <marker date="1517340902278" expanded="true" signature="1681:1710" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -713,10 +763,10 @@
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <marker date="1517262647892" expanded="true" signature="614:644" ph="SELECT url F... crypto_feedurl" />
-            <marker date="1517262647892" expanded="true" signature="969:1006" ph="SELECT MAX(i... crypto_feeddetail" />
-            <marker date="1517262647892" expanded="true" signature="1523:1622" ph="INSERT INTO crypto_feeds... " />
-            <marker date="1517262647892" expanded="true" signature="1837:1866" ph="DELETE FROM " />
+            <marker date="1517340902278" expanded="true" signature="668:698" ph="SELECT url F... crypto_feedurl" />
+            <marker date="1517340902278" expanded="true" signature="813:850" ph="SELECT MAX(i... crypto_feeddetail" />
+            <marker date="1517340902278" expanded="true" signature="1367:1466" ph="INSERT INTO crypto_feeds... " />
+            <marker date="1517340902278" expanded="true" signature="1681:1710" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -744,10 +794,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <marker date="1517262647892" expanded="true" signature="614:644" ph="SELECT url F... crypto_feedurl" />
-            <marker date="1517262647892" expanded="true" signature="969:1006" ph="SELECT MAX(i... crypto_feeddetail" />
-            <marker date="1517262647892" expanded="true" signature="1523:1622" ph="INSERT INTO crypto_feeds... " />
-            <marker date="1517262647892" expanded="true" signature="1837:1866" ph="DELETE FROM " />
+            <marker date="1517340902278" expanded="true" signature="668:698" ph="SELECT url F... crypto_feedurl" />
+            <marker date="1517340902278" expanded="true" signature="813:850" ph="SELECT MAX(i... crypto_feeddetail" />
+            <marker date="1517340902278" expanded="true" signature="1367:1466" ph="INSERT INTO crypto_feeds... " />
+            <marker date="1517340902278" expanded="true" signature="1681:1710" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -833,21 +883,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crypto_in_one/settings.py">
+    <entry file="file://$PROJECT_DIR$/crypto/scripts/feed_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="285">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1517340902278" expanded="true" signature="668:698" ph="SELECT url F... crypto_feedurl" />
+            <marker date="1517340902278" expanded="true" signature="813:850" ph="SELECT MAX(i... crypto_feeddetail" />
+            <marker date="1517340902278" expanded="true" signature="1367:1466" ph="INSERT INTO crypto_feeds... " />
+            <marker date="1517340902278" expanded="true" signature="1681:1710" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -861,25 +915,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/scripts/feed_handler.py">
+    <entry file="file://$PROJECT_DIR$/crypto_in_one/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1517262647892" expanded="true" signature="614:644" ph="SELECT url F... crypto_feedurl" />
-            <marker date="1517262647892" expanded="true" signature="969:1006" ph="SELECT MAX(i... crypto_feeddetail" />
-            <marker date="1517262647892" expanded="true" signature="1523:1622" ph="INSERT INTO crypto_feeds... " />
-            <marker date="1517262647892" expanded="true" signature="1837:1866" ph="DELETE FROM " />
-          </folding>
+        <state relative-caret-position="327">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/crypto/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,7 +4,7 @@ import sqlite3
 from time import mktime
 from datetime import datetime
 # from scr.category_rss import classify, read_dataset
-from crypto.scripts import category_rss
+# from crypto.scripts import category_rss
 
 FILEPATH = '/Users/Rahul/Desktop/Side_projects/crypto_in_one/uci_news.csv'
 conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/crypto_in_one/db.sqlite3', check_same_thread=False)
@@ -23,15 +23,16 @@ def get_urls(user_id):
 
 def parse_feed(feed_url):
     result = []
-    X, y = category_rss.read_dataset(FILEPATH)
-    m, v = category_rss.train_model_save(X, y)
+    # X, y = category_rss.read_dataset(FILEPATH)
+    # m, v = category_rss.train_model_save(X, y)
     parsed_feed = feedparser.parse(feed_url)
     for story in parsed_feed.get('entries'):
         title = story.get('title')
-        category = category_rss.classify(X, y, title, m, v)
+        # category = category_rss.classify(X, y, title, m, v)
         link = story.get('link')
         last_timestamp = story.get('updated_parsed')
-        result.append([title, link, last_timestamp, feed_url, category])
+        result.append([title, link, last_timestamp, feed_url])
+        # result.append([title, link, last_timestamp, feed_url, category])
     return result
 
 
@@ -61,10 +62,11 @@ def feed_execute(user_id, parsed_feed):
         struct = parsed_feed[number][2]
         dt = datetime.fromtimestamp(mktime(struct))
         time = dt.strftime('%H:%M:%S')
-        feed_url = parsed_feed[number][-2]
-        category = parsed_feed[number][-1]
-        c.execute("INSERT INTO crypto_feeddetail (id, user_id, feed_url_id, title, story_url, timestamp, category) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                  (recent_primary_key, user_id, feed_url, title, link, time, category))
+        feed_url = parsed_feed[number][-1]
+        # feed_url = parsed_feed[number][-2]
+        # category = parsed_feed[number][-1]
+        c.execute("INSERT INTO crypto_feeddetail (id, user_id, feed_url_id, title, story_url, timestamp) VALUES (?, ?, ?, ?, ?, ?)",
+                  (recent_primary_key, user_id, feed_url, title, link, time))
         conn.commit()
     print('RSS Done')
 

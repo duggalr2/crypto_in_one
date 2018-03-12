@@ -43,25 +43,32 @@ def landing(request):
     return render(request, 'landing.html')
 
 
+def test():
+    print('hello')
+
+
 def signup(request): # TODO: need to async login and parsing feeds so its faster!
-    # TODO: Get this to run when signup complete..
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save()
             user.refresh_from_db()  # load the profile instance created by the signal
             user.save()
-            user_id = User.objects.all().last().id
-            hit_list = feed_handler.get_urls(user_id)
             urls = form.cleaned_data.get('urls')
-            for url in urls:
-                b = FeedUrl.objects.create(user=user, url=url)
-                b.save()
-            feed_handler.run_it(user_id, hit_list)
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=user.username, password=raw_password)
-            login(request, user)
-            return redirect('home')
+            if len(urls) > 0:
+                user_id = User.objects.all().last().id
+                feed_handler.run_it(user_id, urls)
+                for url in urls:
+                    b = FeedUrl.objects.create(user=user, url=url)
+                    b.save()
+                raw_password = form.cleaned_data.get('password1')
+                user = authenticate(username=user.username, password=raw_password)
+                login(request, user)
+                return redirect('home')
+            else:
+                form = SignUpForm()
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+# TODO: REMOVE DB AND NONSENSE FROM GIT AND ADD TO IGNORE, CHECK ALL FILES TO MAKE SURE NOTHING IMPT IN GITHUB!!

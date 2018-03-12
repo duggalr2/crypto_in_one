@@ -24,17 +24,15 @@ def pag(a, request):
         blog_post = paginator.page(paginator.num_pages)
     return blog_post
 
-# TODO: Check if caching works
-# @csrf_exempt
-# @cache_page(60 * 15)
+
 @login_required(login_url=reverse_lazy('landing'))
 def home(request):
-    feed_list = FeedDetail.objects.filter(user_id=request.user.id).order_by('-pk')
+    current_user_id = request.user.id
+    feed_list = FeedDetail.objects.filter(user_id=current_user_id).order_by('-pk')
     if request.method == 'POST' and 'refresh' in request.POST:
-        user_id = User.objects.all().last().id # TODO: get id of current user...
-        hit_list = feed_handler.get_urls(user_id)
-        feed_handler.run_it(user_id, hit_list)
-        feed_list = FeedDetail.objects.filter(user_id=request.user.id).order_by('-pk')
+        hit_list = feed_handler.get_urls(current_user_id)
+        feed_handler.run_it(current_user_id, hit_list)
+        feed_list = FeedDetail.objects.filter(user_id=current_user_id).order_by('-pk')
         return render(request, 'home.html', {'object_list': feed_list})
     return render(request, 'home.html', {'object_list': feed_list})
 
@@ -47,7 +45,7 @@ def test():
     print('hello')
 
 
-def signup(request): # TODO: need to async login and parsing feeds so its faster!
+def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -72,3 +70,4 @@ def signup(request): # TODO: need to async login and parsing feeds so its faster
     return render(request, 'signup.html', {'form': form})
 
 # TODO: REMOVE DB AND NONSENSE FROM GIT AND ADD TO IGNORE, CHECK ALL FILES TO MAKE SURE NOTHING IMPT IN GITHUB!!
+# TODO: need to async login and parsing feeds so its faster!

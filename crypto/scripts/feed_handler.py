@@ -88,5 +88,3 @@ def run_it(user_id, hit_list):
 # url_list = [line.replace('\n', '') for line in lines]
 # for url in url_list:
 #     add_url(url)
-
-

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114290435-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-114290435-1');
+ </script>
+
+
+
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -11,9 +22,9 @@
 </form>
 
 {% for object in object_list %}
-    - <a href="{{ object.story_url }}">{{ object.title }} </a><i>{{ object.timestamp }}</i><br/>
+    - <a href="{{ object.story_url }}">{{ object.title }} </a><b>Category: {{ object.category }}</b> <i>{{ object.timestamp }}</i><br/>
 {% endfor %}
 
-
+<a href="www.google.com" onclick="ga('send', 'event', 'Google Link', 'Action label', 'Action Value');">link</a>
 </body>
 </html>

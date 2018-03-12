@@ -11,7 +11,7 @@ class FeedDetail(models.Model):
     title = models.CharField(max_length=1000, default='asd')
     story_url = models.URLField(default='https://www.google.ca/')
     timestamp = models.TimeField(default=datetime.now().time())
-
+    category = models.CharField(max_length=500, blank=True, null=True)
 
 # class Feeds(models.Model):
 #     title = models.CharField(max_length=500)

@@ -9,9 +9,16 @@ from crypto.scripts import category_rss
 FILEPATH = '/Users/Rahul/Desktop/Side_projects/crypto_in_one/uci_news.csv'
 conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/crypto_in_one/db.sqlite3', check_same_thread=False)
 c = conn.cursor()
-c.execute('SELECT url FROM crypto_feedurl')
-url_list = c.fetchall()
-hit_list = [url[0] for url in url_list]
+# c.execute('SELECT url FROM crypto_feedurl')
+# url_list = c.fetchall()
+# hit_list = [url[0] for url in url_list]
+
+
+def get_urls(user_id):
+    c.execute('SELECT url FROM crypto_feedurl WHERE user_id=%d' % user_id)
+    url_list = c.fetchall()
+    hit_list = [url[0] for url in url_list]
+    return hit_list
 
 
 def parse_feed(feed_url):
@@ -39,7 +46,7 @@ def add_url(url):
     conn.commit()
 
 
-def feed_execute(parsed_feed):
+def feed_execute(user_id, parsed_feed):
     c.execute('SELECT MAX(id) FROM crypto_feeddetail')
     recent_primary_key = c.fetchone()
     if recent_primary_key[0] is None:
@@ -56,20 +63,20 @@ def feed_execute(parsed_feed):
         time = dt.strftime('%H:%M:%S')
         feed_url = parsed_feed[number][-2]
         category = parsed_feed[number][-1]
-        c.execute("INSERT INTO crypto_feeddetail (id, feed_url_id, title, story_url, timestamp, category) VALUES (?, ?, ?, ?, ?, ?)",
-                  (recent_primary_key, feed_url, title, link, time, category))
+        c.execute("INSERT INTO crypto_feeddetail (id, user_id, feed_url_id, title, story_url, timestamp, category) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                  (recent_primary_key, user_id, feed_url, title, link, time, category))
         conn.commit()
     print('RSS Done')
 
 
-def run_it():
+def run_it(user_id, hit_list):
     """ Main function used in Django view to fetch all rss feeds"""
-    c.execute("DELETE FROM crypto_feeddetail")
+    c.execute("DELETE FROM crypto_feeddetail WHERE user_id=%d" % user_id)
     conn.commit()
     pool = ThreadPool()
     results = pool.map(parse_feed, hit_list)
     for result in results:
-        feed_execute(result)
+        feed_execute(user_id, result)
 
 # if __name__ == '__main__':
 #     run_it()
